@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-        //Exercise 1
+        System.out.println("Exercise 1");
         Jar<String> jar = new Jar<>();
         jar.add("first element in jar");
         jar.add("second element in jar");
@@ -18,14 +18,14 @@ public class Main {
         System.out.println(jar);
         System.out.println();
 
-        //Exercise 2
+        System.out.println("Exercise 2");
         String[] stringArray = ArrayCreator.create(3, "sample string");
         System.out.println(Arrays.toString(stringArray));
         Integer[] intArray = ArrayCreator.create(Integer.class, 5, 666);
         System.out.println(Arrays.toString(intArray));
         System.out.println();
 
-        //Exercise 3
+        System.out.println("Exercise 3");
         Scale<Integer> scaleInt = new Scale<>(1,3);
         System.out.println(scaleInt.getHeavier());
 
@@ -33,14 +33,14 @@ public class Main {
         System.out.println(scaleString.getHeavier());
         System.out.println();
 
-        //Exercise 4
+        System.out.println("Exercise 4");
         GenericBox<String> box1 = new GenericBox<>("chicken in a box");
         System.out.println(box1);
         GenericBox<String> box2 = new GenericBox<>("cat in a box");
         System.out.println(box2);
         System.out.println();
 
-        //Exercise 5
+        System.out.println("Exercise 5");
         GenericBox<Integer> box3 = new GenericBox<>(7);
         System.out.println(box3);
         GenericBox<Integer> box4 = new GenericBox<>(123);
@@ -49,8 +49,7 @@ public class Main {
         System.out.println(box5);
         System.out.println();
 
-        //Exercise 6
-
+        System.out.println("Exercise 6");
         ArrayList<GenericBox<String>> listStrings = new ArrayList<>();
         listStrings.add(new GenericBox<>("Peter"));
         listStrings.add(new GenericBox<>("George"));
@@ -61,8 +60,7 @@ public class Main {
         }
         System.out.println();
 
-        //Exercise 7
-
+        System.out.println("Exercise 7");
         ArrayList<GenericBox<Integer>> listIntegers = new ArrayList<>();
         listIntegers.add(new GenericBox<>(7));
         listIntegers.add(new GenericBox<>(123));
@@ -72,6 +70,29 @@ public class Main {
             System.out.println(item);
         }
         System.out.println();
+
+        System.out.println("Exercise 8");
+        ArrayList<GenericBox<String>> compareListStrings = new ArrayList<>();
+        compareListStrings.add(new GenericBox<>("aa"));
+        compareListStrings.add(new GenericBox<>("aaa"));
+        compareListStrings.add(new GenericBox<>("bb"));
+
+        GenericBox<String> compareString = new GenericBox<>("aa");
+
+        System.out.println(GenericBox.CountGreaterElementsInList(compareListStrings, compareString));
+        System.out.println();
+
+        System.out.println("Exercise 9");
+        ArrayList<GenericBox<Double>> compareListDoubles = new ArrayList<>();
+        compareListDoubles.add(new GenericBox<>(7.13));
+        compareListDoubles.add(new GenericBox<>(123.22));
+        compareListDoubles.add(new GenericBox<>(42.78));
+
+        GenericBox<Double> compareDouble = new GenericBox<>(7.55);
+
+        System.out.println(GenericBox.CountGreaterElementsInList(compareListDoubles, compareDouble));
+        System.out.println();
+
 
     }
 }
