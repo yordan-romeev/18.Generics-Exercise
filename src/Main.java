@@ -1,4 +1,5 @@
 import ArrayCreator.ArrayCreator;
+import GenericBox.GenericBox;
 import GenericScale.Scale;
 import JarOFT.Jar;
 
@@ -21,6 +22,7 @@ public class Main {
         System.out.println(Arrays.toString(stringArray));
         Integer[] intArray = ArrayCreator.create(Integer.class, 5, 666);
         System.out.println(Arrays.toString(intArray));
+        System.out.println();
 
         //Exercise 3
         Scale<Integer> scaleInt = new Scale<>(1,3);
@@ -28,6 +30,23 @@ public class Main {
 
         Scale<String> scaleString = new Scale<>("abc", "abcd");
         System.out.println(scaleString.getHeavier());
+        System.out.println();
+
+        //Exercise 4
+        GenericBox<String> box1 = new GenericBox<>("chicken in a box");
+        System.out.println(box1);
+        GenericBox<String> box2 = new GenericBox<>("cat in a box");
+        System.out.println(box2);
+        System.out.println();
+
+        //Exercise 5
+        GenericBox<Integer> box3 = new GenericBox<>(7);
+        System.out.println(box3);
+        GenericBox<Integer> box4 = new GenericBox<>(123);
+        System.out.println(box4);
+        GenericBox<Integer> box5 = new GenericBox<>(42);
+        System.out.println(box5);
+        System.out.println();
 
     }
 }
