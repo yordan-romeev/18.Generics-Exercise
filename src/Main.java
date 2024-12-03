@@ -3,6 +3,7 @@ import GenericBox.GenericBox;
 import GenericScale.Scale;
 import JarOFT.Jar;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
@@ -46,6 +47,30 @@ public class Main {
         System.out.println(box4);
         GenericBox<Integer> box5 = new GenericBox<>(42);
         System.out.println(box5);
+        System.out.println();
+
+        //Exercise 6
+
+        ArrayList<GenericBox<String>> listStrings = new ArrayList<>();
+        listStrings.add(new GenericBox<>("Peter"));
+        listStrings.add(new GenericBox<>("George"));
+        listStrings.add(new GenericBox<>("Swap me with Peter"));
+        GenericBox.swapElements(listStrings, 0, 2);
+        for (var item : listStrings){
+            System.out.println(item);
+        }
+        System.out.println();
+
+        //Exercise 7
+
+        ArrayList<GenericBox<Integer>> listIntegers = new ArrayList<>();
+        listIntegers.add(new GenericBox<>(7));
+        listIntegers.add(new GenericBox<>(123));
+        listIntegers.add(new GenericBox<>(42));
+        GenericBox.swapElements(listIntegers, 0, 2);
+        for (var item : listIntegers){
+            System.out.println(item);
+        }
         System.out.println();
 
     }
